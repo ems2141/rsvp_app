@@ -1,3 +1,8 @@
+== Heroku URL
+
+Heroku URL: http://polar-sands-7512.herokuapp.com/
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the
@@ -20,12 +25,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-Heroku URL:
-[Production URL: http://polar-sands-7512.herokuapp.com/](http://polar-sands-7512.herokuapp.com/)

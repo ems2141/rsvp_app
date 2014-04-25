@@ -4,4 +4,12 @@ class RegistrationController < ApplicationController
 
   end
 
+  def new
+
+  end
+
+  def create
+    redirect_to '/welcome'
+  end
+
 end

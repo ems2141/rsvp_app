@@ -30,9 +30,12 @@
 
 
 body {
-    background-color:#E7EDE6;
+    background-color: #E7EDE6;
 }
 
+p {
+    font-family: 'Indie Flower', 'cursive';
+}
 
 #header_container,
 #nav_container,
@@ -45,7 +48,7 @@ body {
 header {
     color: #AFE4DC;
     background-color: #193C4D;
-    font-family: 'Pacifico', 'cursive';
+    font-family: 'Indie Flower', 'cursive';
 }
 
 nav {

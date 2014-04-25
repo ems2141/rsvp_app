@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   get '/', to: 'registration#index'
+  get '/rsvp', to: 'registration#new'
+  get '/welcome', to: 'welcome#index'
+  post '/registration', to: 'registration#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
