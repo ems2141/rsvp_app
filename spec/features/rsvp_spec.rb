@@ -10,7 +10,7 @@ feature 'it has a welcome page' do
     fill_in 'name', with: "Sally"
     fill_in 'email', with: "sally@example.com"
     fill_in 'password', with: "ellieandnick2015"
-    click_button 'Submit'
+    click_button 'Yes!'
 
     expect(page).to have_content "Thank you for responding Sally!"
 

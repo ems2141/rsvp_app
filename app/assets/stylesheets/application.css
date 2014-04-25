@@ -31,10 +31,22 @@
 
 body {
     background-color: #E7EDE6;
+    /*background: url("../images/IMG_0445.jpg") no-repeat;*/
 }
 
 p {
     font-family: 'Indie Flower', 'cursive';
+}
+
+table {
+    font-family: 'Indie Flower', 'cursive';
+    color: #193C4D;
+    padding: 3em;
+}
+
+td {
+    padding-left: 2em;
+    padding-top: 1em;
 }
 
 #header_container,
