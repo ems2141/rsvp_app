@@ -31,11 +31,16 @@
 
 body {
     background-color: #E7EDE6;
-    /*background: url("../images/IMG_0445.jpg") no-repeat;*/
+    /*background: url("../assets/images/IMG_0439.jpg") no-repeat;*/
 }
 
 p {
     font-family: 'Indie Flower', 'cursive';
+}
+
+.flash_notice {
+    padding: 10px;
+    color: red;
 }
 
 table {

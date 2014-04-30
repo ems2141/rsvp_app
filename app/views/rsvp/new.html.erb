@@ -1,5 +1,9 @@
 <header><h1 class="welcome">Thank you for RSVP'ing! Please fill in the information below...</h1></header>
 
+<div class="flash_notice">
+  <%= flash[:notice] %>
+</div>
+
 <form action="/rsvp" method="post">
   <table>
     <tr>
@@ -20,10 +24,18 @@
     </tr>
     <tr>
       <td>
-        Password:
+        Wedding Password:
       </td>
       <td>
-        <input type="password" name="password">
+        <input type="password" name="wedding_password">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Create Your Own Password:
+      </td>
+      <td>
+        <input type="password" name="guest_password">
       </td>
     </tr>
     <tr>
