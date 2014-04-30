@@ -1,27 +1,26 @@
+== Overview
+
+This website will be used to collect RSVP's from wedding guests.
+Guests will only be able to create a login to the wedding site with
+a valid wedding password provided to them by the wedding invitations.
+
+Once guests are registered to the site, they will be able to post their RSVP and gather
+information surrounding our special weekend in 2015 :)
+
+== Running this app locally
+
+To run this app locally, fork and clone the github repo and then run the following commands:
+
+bundle
+bin/rake db:create
+bin/rake db:migrate
+bin/rake spec
+
+
 == Heroku URL
 
 Heroku URL: http://polar-sands-7512.herokuapp.com/
 
 
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
