@@ -21,6 +21,10 @@ To run this app locally, fork and clone the github repo and then run the followi
 
 Heroku URL: http://polar-sands-7512.herokuapp.com/
 
+== Pivotal Tracker URL
+
+Tracker URL: https://www.pivotaltracker.com/n/projects/1073904
+
 
 
 
