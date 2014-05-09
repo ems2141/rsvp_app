@@ -9,18 +9,17 @@ class RsvpController < ApplicationController
   end
 
   def create
-    wedding_pass = params[:wedding_password]
-    if wedding_pass == "ellieandnick2015"
-      @user = User.create(name: params[:name], email: params[:email], password: params[:guest_password])
-      if @user.valid?
-        session[:user_id] = @user.id
-        redirect_to '/welcome'
-      else
-        render 'new'
-      end
+    @user = User.new(
+        name: params[:user][:name],
+        email: params[:user][:email],
+        password: params[:user][:password],
+        wedding_password: params[:user][:wedding_password]
+    )
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to '/welcome'
     else
-      redirect_to '/rsvp', notice: "I'm sorry but you do not have the correct password to enter the site"
+      render 'new'
     end
   end
-
 end
