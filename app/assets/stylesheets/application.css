@@ -30,8 +30,9 @@
 
 
 body {
-    background-color: #E7EDE6;
-    /*background: url("../assets/images/IMG_0439.jpg") no-repeat;*/
+    /*background-color: #E7EDE6;*/
+    background: url('nick-and-ellie-steamboat-deck.JPG') no-repeat;
+    background-size: 100% auto;
 }
 
 p {
@@ -43,6 +44,11 @@ p {
     padding: 10px;
     color: red;
     font-family: 'Indie Flower', 'cursive';
+}
+
+.inner_container {
+    margin-left: 40px;
+    margin-bottom: 25px;
 }
 
 table {
