@@ -38,9 +38,11 @@ p {
     font-family: 'Indie Flower', 'cursive';
 }
 
-.flash_notice {
+
+.error {
     padding: 10px;
     color: red;
+    font-family: 'Indie Flower', 'cursive';
 }
 
 table {
@@ -75,6 +77,10 @@ nav {
 
 #content {
     background-color: white;
+}
+
+.container {
+
 }
 
 
