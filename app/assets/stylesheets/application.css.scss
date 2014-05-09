@@ -30,13 +30,8 @@
 
 
 body {
-    /*background-color: #E7EDE6;*/
-    background: url('nick-and-ellie-steamboat-deck.JPG') no-repeat;
+    background: image-url('nick-and-ellie-steamboat-deck.JPG') no-repeat;
     background-size: 100% auto;
-}
-
-p {
-    font-family: 'Indie Flower', 'cursive';
 }
 
 
@@ -46,9 +41,20 @@ p {
     font-family: 'Indie Flower', 'cursive';
 }
 
+.field_with_errors {
+    display: inline;
+}
+
 .inner_container {
     margin-left: 40px;
     margin-bottom: 25px;
+    font-family: 'Indie Flower', 'cursive';
+}
+
+.login {
+    margin-left: 40px;
+    font-weight: bold;
+    font-family: 'Indie Flower', 'cursive';
 }
 
 table {
