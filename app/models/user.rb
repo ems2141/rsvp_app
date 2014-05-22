@@ -1,10 +1,7 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
+  has_secure_password
   validate :wedding_password_is_correct
+  validates :password, length: {minimum: 8}
 
   def wedding_password
    @wedding_password

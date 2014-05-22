@@ -2,79 +2,36 @@
   <header><h1 class="welcome">Thank you for RSVP'ing! Please fill in the information below...</h1></header>
 
   <div class="error">
-    <% @user.errors.full_messages.each do |error| %>
-      <%= error %>
-    <% end %>
+    <ul>
+      <% @user.errors.full_messages.each do |error| %>
+        <li> <%= error %></li>
+      <% end %>
+    </ul>
   </div>
 
 
   <%= form_for @user, url: "/rsvp" do |f| %>
+    <div class="inner_container">
+      <p><%= f.label :name %>
+        <%= f.text_field :name %></p>
 
-    <p><%= f.label :name %>
-      <%= f.text_field :name %></p>
+      <p><%= f.label :email %>
+        <%= f.text_field :email %></p>
 
-    <p><%= f.label :email %>
-      <%= f.text_field :email %></p>
+      <p><%= f.label :password, "Your Password" %>
+        <%= f.password_field :password %></p>
 
-    <p><%= f.label :password, "Your Password" %>
-      <%= f.password_field :password %></p>
+      <p><%= f.label :wedding_password, "Wedding Password" %>
+        <%= f.password_field :wedding_password %></p>
 
-    <p><%= f.label :wedding_password, "Wedding Password" %>
-      <%= f.password_field :wedding_password %></p>
+      <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
 
-    <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
-
+    </div>
   <% end %>
 
-
-  <!--<form action="/rsvp" method="post">-->
-  <!--<table>-->
-  <!--<tr>-->
-  <!--<td>-->
-  <!--Name:-->
-  <!--</td>-->
-  <!--<td>-->
-  <!--<input type="text" name="name">-->
-  <!--</td>-->
-  <!--</tr>-->
-  <!--<tr>-->
-  <!--<td>-->
-  <!--Email:-->
-  <!--</td>-->
-  <!--<td>-->
-  <!--<input type="email" name="email">-->
-  <!--</td>-->
-  <!--</tr>-->
-  <!--<tr>-->
-  <!--<td>-->
-  <!--Wedding Password:-->
-  <!--</td>-->
-  <!--<td>-->
-  <!--<input type="password" name="wedding_password">-->
-  <!--</td>-->
-  <!--</tr>-->
-  <!--<tr>-->
-  <!--<td>-->
-  <!--Create Your Own Password:-->
-  <!--</td>-->
-  <!--<td>-->
-  <!--<input type="password" name="guest_password">-->
-  <!--</td>-->
-  <!--</tr>-->
-  <!--<tr>-->
-  <!--<td>-->
-  <!--All set?-->
-  <!--</td>-->
-  <!--<td>-->
-  <!--<input type="submit" value="Yes!">-->
-  <!--</td>-->
-  <!--</tr>-->
-
-  <!--</table>-->
-  <!--</form>-->
-
-  <p>
-    Already have an account? <a href="/login">Login Here</a>
-  </p>
-
+  <div class="login">
+    <p>
+      Already have an account? <a href="/login">Login Here</a>
+    </p>
+  </div>
 </div>

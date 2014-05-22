@@ -32,12 +32,12 @@ feature 'it has a welcome page' do
   scenario 'user can login with correct email and password' do
     pending
     User.create(name: "Jake", email: "jschneiders@nyx.com", password: "hello123")
-    visit '/'
+    visit '/rsvp'
     click_link 'Login Here'
 
-    fill_in 'name', with: 'Jake'
-    fill_in 'email', with: 'jschneiders@nyx.com'
-    fill_in 'guest_password', with: hello123
+    fill_in 'Name', with: 'Jake'
+    fill_in 'Email', with: 'jschneiders@nyx.com'
+    fill_in 'Your Password', with: 'hello123'
     click_on 'Login'
 
     expect(page).to have_content "Welcome Jake!"

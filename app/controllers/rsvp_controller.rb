@@ -16,7 +16,7 @@ class RsvpController < ApplicationController
         wedding_password: params[:user][:wedding_password]
     )
     if @user.save
-      session[:user_id] = @user.id
+      log_user_in(@user)
       redirect_to '/welcome'
     else
       render 'new'
