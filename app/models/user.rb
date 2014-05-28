@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
   has_secure_password
   validate :wedding_password_is_correct
+  validates_uniqueness_of :email
   validates :password, length: {minimum: 8}
 
   def wedding_password
-   @wedding_password
+    @wedding_password
   end
 
   def wedding_password=(wedding_password)

@@ -30,14 +30,21 @@ feature 'it has a welcome page' do
   end
 
   scenario 'user can login with correct email and password' do
-    pending
-    User.create(name: "Jake", email: "jschneiders@nyx.com", password: "hello123")
+    #User.create!(name: "Jake", email: "jake@example.com", password: "hello123", wedding_password: "ellieandnick2015")
+    user = User.new(
+        name: "Jake",
+        email: "jake@example.com",
+        password: "hello123",
+        wedding_password: "ellieandnick2015"
+    )
+    user.save!
     visit '/rsvp'
+
     click_link 'Login Here'
 
     fill_in 'Name', with: 'Jake'
-    fill_in 'Email', with: 'jschneiders@nyx.com'
-    fill_in 'Your Password', with: 'hello123'
+    fill_in 'Email', with: 'jake@example.com'
+    fill_in 'Password', with: 'hello123'
     click_on 'Login'
 
     expect(page).to have_content "Welcome Jake!"

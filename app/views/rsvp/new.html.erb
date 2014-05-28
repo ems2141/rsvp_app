@@ -10,7 +10,7 @@
   </div>
 
 
-  <%= form_for @user, url: "/rsvp" do |f| %>
+  <%= form_for @user, url: rsvp_path do |f| %>
     <div class="inner_container">
       <p><%= f.label :name %>
         <%= f.text_field :name %></p>

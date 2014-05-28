@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get '/', to: 'rsvp#index'
   get '/rsvp', to: 'rsvp#new'
   post '/rsvp', to: 'rsvp#create'
-  get '/login', to: 'login#new'
-  post '/login', to: 'login#show'
+  get '/login', to: 'login#index'
 
+  resource :session, only: [:create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

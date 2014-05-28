@@ -1,0 +1,15 @@
+<header><h1 class="welcome">Welcome back!  Please login below</h1></header>
+
+<p><%= flash[:failed_login] %></p>
+
+<%= form_tag :controller => :sessions, :action => :create do %>
+
+  <div class="inner_container">
+    <ul>
+      <li><%= label_tag :name %><%= text_field_tag :name %></li>
+      <li><%= label_tag :email %><%= text_field_tag :email %></li>
+      <li><%= label_tag :password %><%= password_field_tag :password %></li>
+      <li><%= submit_tag 'Login', :id => 'login_submit' %></li>
+    </ul>
+  </div>
+<% end %>
