@@ -7,6 +7,10 @@ a valid wedding password provided to them by the wedding invitations.
 Once guests are registered to the site, they will be able to post their RSVP and gather
 information surrounding our special weekend in 2015 :)
 
+Guests will also have access to a fun "Table Seater" algorithm.  To use, they can submit a list of
+guests and select how they want to have the tables arranged.  In the next iteration, I intend to
+allow guests to customize how they would like their guest lists filtered for seating arrangements.
+
 == Running this app locally
 
 To run this app locally, fork and clone the github repo and then run the following commands:
