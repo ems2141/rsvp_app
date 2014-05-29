@@ -1,6 +1,7 @@
 <header><h1 class="welcome">Welcome back!  Please login below</h1></header>
 
 <p><%= flash[:failed_login] %></p>
+<p><%= flash[:notice] %></p>
 
 <%= form_tag :controller => :sessions, :action => :create do %>
 

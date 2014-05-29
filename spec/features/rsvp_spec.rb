@@ -50,7 +50,24 @@ feature 'it has a welcome page' do
     expect(page).to have_content "Welcome Jake!"
   end
 
-  scenario 'user can RSVP'
-  scenario 'users can be defined as admin'
-  scenario 'admin users can view list of guests who have sent their rsvp'
+  scenario 'a user can logout' do
+    user = User.new(
+        name: "Jake",
+        email: "jake@example.com",
+        password: "hello123",
+        wedding_password: "ellieandnick2015"
+    )
+    user.save!
+    visit '/rsvp'
+
+    click_link 'Login Here'
+
+    fill_in 'Name', with: 'Jake'
+    fill_in 'Email', with: 'jake@example.com'
+    fill_in 'Password', with: 'hello123'
+    click_on 'Login'
+
+    click_on 'Logout'
+    expect(page).to have_content 'You have been logged out'
+  end
 end

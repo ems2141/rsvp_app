@@ -1,3 +1,4 @@
 <header><h1>Welcome <%= @user.name %>!</h1></header>
+<%= link_to "Logout", session_path, method: :delete, class:"logout" %>
 
-
+<a href="/tableseater">Table Seater</a>

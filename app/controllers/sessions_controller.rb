@@ -11,4 +11,9 @@ class SessionsController < ApplicationController
       render 'login/index'
     end
   end
+
+  def destroy
+    log_user_out
+    redirect_to '/login', notice: "You have been logged out"
+  end
 end
