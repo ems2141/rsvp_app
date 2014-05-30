@@ -1,12 +1,12 @@
 <section>
 <p><span>Welcome back!</span><p>
 <h1>Please login below</h1>
-</section>
+
 
   <p class="errors"><%= flash[:failed_login] %></p>
   <p style="color: deepskyblue"><%= flash[:notice] %></p>
 
-
+<div class="two_third">
 <%= form_for @user, url: session_path do |f| %>
 
     <p><%= f.label :email %>
@@ -17,3 +17,5 @@
 
     <p><%= f.submit "Login", :id => 'login_submit', class: "form-button" %></p>
 <% end %>
+</div>
+</section>
