@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 /*
         STYLE.CSS:
         One stylesheet to rule them all.
@@ -21,10 +20,7 @@
         selector { property:value }
 
 */
-
 /* ----- =structure ----- */
-
-
 @import url(http://fonts.googleapis.com/css?family=Oswald:700);
 
 $dark_gray: #3d3d3d;
@@ -78,9 +74,25 @@ p {
   }
 }
 
+.login {
+  margin: 20px;
+  font-size: .8em;
+  font-family: 'Didot', serif;
+  color: $dark_gray;
+}
+
 li {
   list-style-type: none;
 }
+input[type="submit"] {
+  width: 2em;
+  font-size: .7em;
+  font-family: 'Didot', serif;
+  padding: .6em 0;
+//  background-color: black;
+//  color: whitesmoke;
+}
+
 .errors {
   margin: 40px;
   font-size: 1.5em;
@@ -94,6 +106,9 @@ li {
   font-size: 2.2em;
   font-family: 'Didot', serif;
   color: $dark_gray;
+  input {
+    border: 1px solid red;
+  }
 }
 
 //body {
