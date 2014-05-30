@@ -29,12 +29,7 @@ feature 'it has a welcome page' do
   end
 
   scenario 'user can login with correct email and password' do
-    user = User.new(
-        name: "Jake",
-        email: "jake@example.com",
-        password: "hello123",
-        wedding_password: "ellieandnick2015"
-    )
+    user = new_user
     user.save!
     visit '/rsvp'
 
@@ -48,12 +43,7 @@ feature 'it has a welcome page' do
   end
 
   scenario 'a user can logout' do
-    user = User.new(
-        name: "Jake",
-        email: "jake@example.com",
-        password: "hello123",
-        wedding_password: "ellieandnick2015"
-    )
+    user = new_user
     user.save!
     visit '/rsvp'
 
@@ -68,12 +58,7 @@ feature 'it has a welcome page' do
   end
 
   scenario 'user cannot login with invalid email or password' do
-    user = User.new(
-        name: "Jake",
-        email: "jake@example.com",
-        password: "hello123",
-        wedding_password: "ellieandnick2015"
-    )
+    user = new_user
     user.save!
     visit '/rsvp'
 

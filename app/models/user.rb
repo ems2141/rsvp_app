@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
   validate :wedding_password_is_correct
-  validates_uniqueness_of :email
+  validates :email, {presence: true, uniqueness: true }
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i }
   validates :password, length: {minimum: 8}
 
   def wedding_password
