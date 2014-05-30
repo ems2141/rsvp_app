@@ -1,17 +1,15 @@
-<div class="container">
-  <header><h1 class="welcome">Thank you for RSVP'ing! Please fill in the information below...</h1></header>
+<section>
+<h1>Please register below</h1>
+</section>
 
-  <div class="error">
     <ul>
       <% @user.errors.full_messages.each do |error| %>
         <li> <%= error %></li>
       <% end %>
     </ul>
-  </div>
 
 
   <%= form_for @user, url: rsvp_path do |f| %>
-    <div class="inner_container">
       <p><%= f.label :name %>
         <%= f.text_field :name %></p>
 
@@ -25,13 +23,8 @@
         <%= f.password_field :wedding_password %></p>
 
       <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
-
-    </div>
   <% end %>
 
-  <div class="login">
     <p>
       Already have an account? <a href="/login">Login Here</a>
     </p>
-  </div>
-</div>

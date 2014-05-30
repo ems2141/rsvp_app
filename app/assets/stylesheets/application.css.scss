@@ -24,161 +24,217 @@
 
 /* ----- =structure ----- */
 
-body {
-  background: image-url('nick-and-ellie-steamboat-deck.JPG') no-repeat;
-  background-size: 100% auto;
-}
 
-.error {
-  padding: 10px;
-  color: red;
-  font-family: 'Indie Flower', 'cursive';
-}
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
 
-.notice {
-  font-size: 200%;
-  min-width: 100%;
-  color: #AFE4DC;
-  background-color: #193C4D;
-  font-family: 'Indie Flower', 'cursive';
+$dark_gray: #3d3d3d;
+
+section {
   text-align: center;
-}
-
-.field_with_errors {
-  display: inline;
-}
-
-.inner_container {
-  margin-left: 40px;
-  margin-bottom: 25px;
-  font-family: 'Indie Flower', 'cursive';
-}
-
-.login {
-  margin-left: 40px;
-  font-weight: bold;
-  font-family: 'Indie Flower', 'cursive';
-}
-
-table {
-  font-family: 'Indie Flower', 'cursive';
-  color: #193C4D;
-  padding: 3em;
-}
-
-td {
-  padding-left: 2em;
-  padding-top: 1em;
-}
-
-#header_container,
-#nav_container,
-#content_container,
-#footer_container {
-  margin: auto;
-  width: 960px;
-}
-
-header {
-  color: #AFE4DC;
-  background-color: #193C4D;
-  font-family: 'Indie Flower', 'cursive';
-}
-
-nav {
-  background-color: red;
+  width: 80%;
+  max-width: 600px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-#content {
-  background-color: white;
+h1 {
+  font-size: 9.0em;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  background: image-url('steamboat-trees.JPG') left center no-repeat;
+  background-size: cover;
+  /* BACKGROUND CLIP TO ALLOW GIF TO MASK THROUGH */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.container {
-
-}
-
-footer {
-  background-color: orange;
-}
-
-/* ----- =columns ----- */
-
-.one_half {
-  width: 460px;
-}
-
-.one_third {
-  width: 300px;
-}
-
-.two_third {
-  width: 620px;
-}
-
-.one_fourth {
-  width: 220px;
-}
-
-.three_fourth {
-  width: 700px;
-}
-
-.full_column {
-  width: 940px;
-}
-
-.one_half, .one_third, .two_third, .three_fourth, .one_fourth, .full_column {
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  float: left;
-}
-
-.resetColumnSet {
-  clear: both;
-}
-
-/* ----- =menu (Primary Nav) ----- */
-
-#menu {
-  float: right; /* or float: left */
-  margin: 0 10px 0 0;
-}
-
-#menu li {
-  float: left;
-  list-style: none;
-}
-
-#menu li a {
-  font-size: 120%;
-  font-weight: bold;
-  color: #fff;
-  padding: 17px 25px 15px 25px;
-  display: block;
-  text-decoration: none;
-}
-
-#menu li a:hover {
-  color: #fff;
-  background-color: #3b2c2c;
-}
-
-/*Borders between each button */
-#menu li + li {
-  border-left: 1px solid #000;
-}
-
-/*Borders on both sides */
-#menu li:first-child a {
-  border-left: 1px solid #000;
-}
-
-#menu li:last-child a {
-  border-right: 1px solid #000;
+p {
+  margin: 40px;
+  font-size: 2.2em;
+  font-family: 'Didot', serif;
+  color: $dark_gray;
+  span {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    &:after, &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      background: $dark_gray;
+      width: 99999px;
+    }
+    &:before {
+      left: 100%;
+      margin-left: 20px;
+    }
+    &:after {
+      right: 100%;
+      margin-right: 20px;
+    }
+  }
 }
 
 
 
+//body {
+//  background: image-url('nick-and-ellie-steamboat-deck.JPG') no-repeat;
+//  background-size: 100% auto;
+//}
+//
+//.error {
+//  padding: 10px;
+//  color: red;
+//  font-family: 'Roboto Condensed', sans-serif;
+//}
+//
+//.notice {
+//  font-size: 200%;
+//  min-width: 100%;
+//  color: #AFE4DC;
+//  background-color: #193C4D;
+//  font-family: 'Roboto Condensed', sans-serif;
+//  text-align: center;
+//}
+//
+//.field_with_errors {
+//  display: inline;
+//}
+//
+//.inner_container {
+//  margin-left: 40px;
+//  margin-bottom: 25px;
+//  font-family: 'Roboto Condensed', sans-serif;
+//}
+//
+//.login {
+//  margin-left: 40px;
+//  font-weight: bold;
+//  font-family: 'Roboto Condensed', sans-serif;
+//}
+//
+//table {
+//  font-family: 'Roboto Condensed', sans-serif;
+//  color: #193C4D;
+//  padding: 3em;
+//}
+//
+//td {
+//  padding-left: 2em;
+//  padding-top: 1em;
+//}
+//
+//#header_container,
+//#nav_container,
+//#content_container,
+//#footer_container {
+//  margin: auto;
+//  width: 960px;
+//}
+//
+//header {
+//  color: white;
+//  background-color: #335522;
+//  font-family: 'Roboto Condensed', sans-serif;
+//}
+//
+//nav {
+//  background-color: red;
+//  overflow: hidden;
+//}
+//
+//#content {
+//  background-color: white;
+//}
+//
+//.container {
+//
+//}
+//
+//footer {
+//  background-color: orange;
+//}
+//
+///* ----- =columns ----- */
+//
+//.one_half {
+//  width: 460px;
+//}
+//
+//.one_third {
+//  width: 300px;
+//}
+//
+//.two_third {
+//  width: 620px;
+//}
+//
+//.one_fourth {
+//  width: 220px;
+//}
+//
+//.three_fourth {
+//  width: 700px;
+//}
+//
+//.full_column {
+//  width: 940px;
+//}
+//
+//.one_half, .one_third, .two_third, .three_fourth, .one_fourth, .full_column {
+//  position: relative;
+//  margin-left: 10px;
+//  margin-right: 10px;
+//  margin-bottom: 20px;
+//  float: left;
+//}
+//
+//.resetColumnSet {
+//  clear: both;
+//}
+//
+///* ----- =menu (Primary Nav) ----- */
+//
+//#menu {
+//  float: right; /* or float: left */
+//  margin: 0 10px 0 0;
+//}
+//
+//#menu li {
+//  float: left;
+//  list-style: none;
+//}
+//
+//#menu li a {
+//  font-size: 120%;
+//  font-weight: bold;
+//  color: #fff;
+//  padding: 17px 25px 15px 25px;
+//  display: block;
+//  text-decoration: none;
+//}
+//
+//#menu li a:hover {
+//  color: #fff;
+//  background-color: #3b2c2c;
+//}
+//
+///*Borders between each button */
+//#menu li + li {
+//  border-left: 1px solid #000;
+//}
+//
+///*Borders on both sides */
+//#menu li:first-child a {
+//  border-left: 1px solid #000;
+//}
+//
+//#menu li:last-child a {
+//  border-right: 1px solid #000;
+//}
+//
+//
+//

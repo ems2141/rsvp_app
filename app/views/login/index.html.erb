@@ -1,13 +1,14 @@
-<header><h1 class="welcome">Welcome back! Please login below</h1></header>
+<section>
+<p><span>Welcome back!</span><p>
+<h1>Please login below</h1>
+</section>
 
-<div class="notice">
   <p><%= flash[:failed_login] %></p>
 
   <p><%= flash[:notice] %></p>
-</div>
+
 
 <%= form_for @user, url: session_path do |f| %>
-  <div class="inner_container">
     <p><%= f.label :name %>
       <%= f.text_field :name %></p>
 
@@ -18,5 +19,4 @@
       <%= f.password_field :password %></p>
 
     <p><%= f.submit "Login", :id => 'login_submit', class: "form-button" %></p>
-
 <% end %>

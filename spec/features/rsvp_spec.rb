@@ -6,7 +6,6 @@ feature 'it has a welcome page' do
     expect(page).to have_content "Welcome to Ellie and Nick's Wedding Website"
 
     click_on "RSVP"
-    expect(page).to have_content "Thank you for RSVP'ing!  Please fill in the information below..."
     fill_in 'Name', with: "Sally"
     fill_in 'Email', with: "sally@example.com"
     fill_in 'Wedding Password', with: "ellieandnick2015"
@@ -30,7 +29,6 @@ feature 'it has a welcome page' do
   end
 
   scenario 'user can login with correct email and password' do
-    #User.create!(name: "Jake", email: "jake@example.com", password: "hello123", wedding_password: "ellieandnick2015")
     user = User.new(
         name: "Jake",
         email: "jake@example.com",

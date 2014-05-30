@@ -1,4 +1,11 @@
-<header><h1>Welcome <%= @user.name %>!</h1></header>
-<%= link_to "Logout", session_path, method: :delete, class:"logout" %>
+<section>
+  <p><span>August 8th, 2015</span><p>
 
-<a href="/tableseater">Table Seater</a>
+  <h1>Welcome <%= @user.name %>!</h1>
+
+  <p><span>
+    <%= link_to "Logout", session_path, method: :delete, class: "logout" %>
+    <br>
+    <a href="/tableseater">Table Seater</a>
+  </span></p>
+</section>
