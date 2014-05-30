@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/rsvp', to: 'rsvp#new'
   post '/rsvp', to: 'rsvp#create'
   get '/login', to: 'login#index'
-  get 'tableseater', to: 'tableseater#index'
+  get '/table_seating/new', to: 'table_seating#new'
 
   resource :session, only: [:create, :destroy]
 
