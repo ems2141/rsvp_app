@@ -40,7 +40,6 @@ feature 'it has a welcome page' do
 
     click_link 'Login Here'
 
-    fill_in 'Name', with: 'Jake'
     fill_in 'Email', with: 'jake@example.com'
     fill_in 'Password', with: 'hello123'
     click_on 'Login'
@@ -60,7 +59,6 @@ feature 'it has a welcome page' do
 
     click_link 'Login Here'
 
-    fill_in 'Name', with: 'Jake'
     fill_in 'Email', with: 'jake@example.com'
     fill_in 'Password', with: 'hello123'
     click_on 'Login'

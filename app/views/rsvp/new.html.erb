@@ -1,30 +1,32 @@
 <section>
-<h1>Please register below</h1>
+  <p><span>Hello</span><p>
+  <h1>Please register below</h1>
 </section>
 
-    <ul>
-      <% @user.errors.full_messages.each do |error| %>
-        <li> <%= error %></li>
-      <% end %>
-    </ul>
 
-
-  <%= form_for @user, url: rsvp_path do |f| %>
-      <p><%= f.label :name %>
-        <%= f.text_field :name %></p>
-
-      <p><%= f.label :email %>
-        <%= f.text_field :email %></p>
-
-      <p><%= f.label :password, "Your Password" %>
-        <%= f.password_field :password %></p>
-
-      <p><%= f.label :wedding_password, "Wedding Password" %>
-        <%= f.password_field :wedding_password %></p>
-
-      <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
+<ul class="errors">
+  <% @user.errors.full_messages.each do |error| %>
+    <li> <%= error %></li>
   <% end %>
+</ul>
 
-    <p>
-      Already have an account? <a href="/login">Login Here</a>
-    </p>
+
+<%= form_for @user, url: rsvp_path do |f| %>
+  <p><%= f.label :name %>
+    <%= f.text_field :name %></p>
+
+  <p><%= f.label :email %>
+    <%= f.text_field :email %></p>
+
+  <p><%= f.label :password, "Your Password" %>
+    <%= f.password_field :password %></p>
+
+  <p><%= f.label :wedding_password, "Wedding Password" %>
+    <%= f.password_field :wedding_password %></p>
+
+  <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
+<% end %>
+
+<p>
+  Already have an account? <a href="/login">Login Here</a>
+</p>
