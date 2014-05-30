@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       redirect_to '/welcome'
     else
       flash[:failed_login] = "Invalid email or password"
+      @user = User.new
       render 'login/index'
     end
   end

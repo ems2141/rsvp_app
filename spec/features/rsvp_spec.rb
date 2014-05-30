@@ -66,4 +66,22 @@ feature 'it has a welcome page' do
     click_on 'Logout'
     expect(page).to have_content 'You have been logged out'
   end
+
+  scenario 'user cannot login with invalid email or password' do
+    user = User.new(
+        name: "Jake",
+        email: "jake@example.com",
+        password: "hello123",
+        wedding_password: "ellieandnick2015"
+    )
+    user.save!
+    visit '/rsvp'
+
+    click_link 'Login Here'
+
+    fill_in 'Email', with: 'jake@test.com'
+    fill_in 'Password', with: 'hello123'
+    click_on 'Login'
+    expect(page).to have_content 'Invalid email or password'
+  end
 end
