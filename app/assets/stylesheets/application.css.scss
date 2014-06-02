@@ -95,9 +95,13 @@ input[type="submit"] {
 
 .errors {
   margin: 40px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: 'Didot', serif;
   color: red;
+}
+
+.form_container {
+  font-size: .6em;
 }
 
 .field_with_errors {

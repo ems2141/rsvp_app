@@ -15,20 +15,22 @@
   </ul>
 
   <div class="two_third">
-    <%= form_for @user, url: rsvp_path do |f| %>
-      <p><%= f.label :name %>
-        <%= f.text_field :name %></p>
+    <div class="form_container">
+      <%= form_for @user, url: rsvp_path do |f| %>
+        <p><%= f.label :name %>
+          <%= f.text_field :name %></p>
 
-      <p><%= f.label :email %>
-        <%= f.text_field :email %></p>
+        <p><%= f.label :email %>
+          <%= f.text_field :email %></p>
 
-      <p><%= f.label :password, "Your Password" %>
-        <%= f.password_field :password %></p>
+        <p><%= f.label :password, "Your Password" %>
+          <%= f.password_field :password %></p>
 
-      <p><%= f.label :wedding_password, "Wedding Password" %>
-        <%= f.password_field :wedding_password %></p>
+        <p><%= f.label :wedding_password, "Wedding Password" %>
+          <%= f.password_field :wedding_password %></p>
 
-      <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
-    <% end %>
+        <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
+      <% end %>
+    </div>
   </div>
 </section>

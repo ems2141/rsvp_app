@@ -1,0 +1,19 @@
+<section>
+  <p><span>Table Seater</span></p>
+
+  <div class="one_half">
+    <div class="form_container">
+      <%= form_tag :controller => :table_seating, :action => :create do %>
+        <p><%= label_tag :guests %><%= text_field_tag :guests %></p>
+
+        <p><%= check_box_tag 'seating_method[1]' %>
+          <%= label_tag 'seating_method[1]', "Seat Every Other" %></p>
+
+        <p><%= check_box_tag 'seating_method[2]' %>
+          <%= label_tag 'seating_method[2]', "Seat Every Third" %></p>
+
+        <p><%= submit_tag 'Seat Now', :id => 'seating_submit' %></p>
+      <% end %>
+    </div>
+  </div>
+</section>
