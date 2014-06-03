@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'it allows user to play with a table seating chart' do
   scenario 'user can submit a lists of people to be seated every other' do
-    user = User.create!(
+    User.create!(
         name: "Jake",
         email: "jake@example.com",
         password: "hello123",
@@ -26,5 +26,9 @@ feature 'it allows user to play with a table seating chart' do
     click_on 'Seat Now'
 
     expect(page).to have_content('Table 1: Sam, Jake, Jay, Bob, Joe, Charlie, Jeff, and John')
+
+    # users who have created a new table seating can click a link to go back to the welcome page
+    click_on 'Home'
+    expect(page).to have_content "Welcome Jake!"
   end
 end

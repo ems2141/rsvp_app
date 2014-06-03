@@ -6,8 +6,6 @@ class TableSeatingController < ApplicationController
   def create
     seating_method = params[:seating_method]
     guests = params[:guests].gsub("\r", "").split("\n")
-    # take in the guest list to arrange seating for
-    # convert guest names into an array of strings
 
     if seating_method == "Seat Every Other"
       table_arrangement = TableSeater.new(guests).arrange_every_other
@@ -22,5 +20,4 @@ class TableSeatingController < ApplicationController
   def show
     @table_seating = TableSeating.find(params[:id])
   end
-
 end
