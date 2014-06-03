@@ -21,10 +21,10 @@ feature 'it allows user to play with a table seating chart' do
 
     click_on 'Table Seater'
 
-    fill_in 'Guests', with: '"Sam", "Joe", "Jake", "Charlie", "Jay", "Jeff", "Bob", "John"'
-    page.check 'seating_method[1]'
+    fill_in 'Guests', with: "Sam\nJoe\nJake\nCharlie\nJay\nJeff\nBob\nJohn"
+    choose('seating_method_Seat_Every_Other')
     click_on 'Seat Now'
 
-    expect(page).to have_content('Table 1: Sam, Jake, Jay, Bob, Joe, Charlie, Jeff, John')
+    expect(page).to have_content('Table 1: Sam, Jake, Jay, Bob, Joe, Charlie, Jeff, and John')
   end
 end

@@ -1,22 +1,26 @@
 class TableSeatingController < ApplicationController
   def new
-   # @table_seating = TableSeating.new
+   @table_seating = TableSeating.new
   end
 
   def create
-    # take in which method to run in algo
+    seating_method = params[:seating_method]
+    guests = params[:guests].gsub("\r", "").split("\n")
     # take in the guest list to arrange seating for
     # convert guest names into an array of strings
 
-    # run algo
-    # algo returns an array of strings
-    # figure out how to save an array of strings into db
-    # TableSeating.create! from the output of the algo
-    # redirect_to show
+    if seating_method == "Seat Every Other"
+      table_arrangement = TableSeater.new(guests).arrange_every_other
+    else
+      table_arrangement = TableSeater.new(guests).arrange_every_third
+    end
+
+    @table_seating = TableSeating.create!(:table_seating => table_arrangement)
+    redirect_to table_seating_path(@table_seating)
   end
 
   def show
-    # @table_seating = TableSeating.find(params[:id])
+    @table_seating = TableSeating.find(params[:id])
   end
 
 end
