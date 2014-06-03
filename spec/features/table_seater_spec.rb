@@ -20,6 +20,7 @@ feature 'it allows user to play with a table seating chart' do
     expect(page).to have_content "Welcome Jake!"
 
     click_on 'Table Seater'
+    expect(page).to have_link "Home"
 
     fill_in 'Guests', with: "Sam\nJoe\nJake\nCharlie\nJay\nJeff\nBob\nJohn"
     choose('seating_method_Seat_Every_Other')
