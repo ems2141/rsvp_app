@@ -1,6 +1,10 @@
 class TableSeatingController < ApplicationController
   def new
-   @table_seating = TableSeating.new
+    if current_user.admin?
+      @table_seating = TableSeating.new
+    else
+      redirect_to '/welcome'
+    end
   end
 
   def create
