@@ -6,7 +6,8 @@ feature 'it allows user to play with a table seating chart' do
         name: "Jake",
         email: "jake@example.com",
         password: "hello123",
-        wedding_password: "ellieandnick2015"
+        wedding_password: "ellieandnick2015",
+        admin: true
     )
 
     visit '/rsvp'

@@ -1,24 +1,29 @@
 <div class="small_action_link"><%= link_to "Logout", session_path, method: :delete, class: "logout" %></div>
 
 <section>
-  <p><span>August 8th, 2015</span><p>
+  <p><span>August 8th, 2015</span>
+
+  <p>
 
   <h1>Welcome <%= @user.name %>!</h1>
 
   <p><span>
+    <% if current_user.admin? %>
     <a href="/table_seating/new">Table Seater</a>
+      <% end %>
   </span></p>
 
-  <!--leaving the below here incase I wnat to reference using columns later-->
-<div class="one_half">
-  <!--asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk-->
+  <div class="one_half">
+    <% if current_user.admin? %>
+      <p>RSVP'ed Guests</p>
 
-</div>
+    <% end %>
 
-<div class="one_half">
-  <!--asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk  asdlfkjas;ldfkjs;lfk-->
-</div>
+  </div>
+
+  <div class="one_half">
+  </div>
 
 
-<div class="resetColumnSet"></div>
+  <div class="resetColumnSet"></div>
 </section>

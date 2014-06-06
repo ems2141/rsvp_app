@@ -48,5 +48,6 @@ describe TableSeater do
                       "Allison Mayert"]
 
     expect(ordered_list).to eq expected_value
+
   end
 end

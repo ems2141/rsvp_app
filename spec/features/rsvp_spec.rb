@@ -3,7 +3,6 @@ require 'spec_helper'
 feature 'it has a welcome page' do
   scenario 'user can visit welcome page' do
     visit '/'
-    expect(page).to have_content "Welcome to Ellie and Nick's Wedding Website"
 
     click_on "RSVP"
     fill_in 'Name', with: "Sally"
@@ -68,5 +67,34 @@ feature 'it has a welcome page' do
     fill_in 'Password', with: 'hello123'
     click_on 'Login'
     expect(page).to have_content 'Invalid email or password'
+  end
+
+  scenario 'user can be designated as admin and click link to see a list of registered users' do
+    admin_user = new_user(admin: true)
+    admin_user.save!
+    visit '/rsvp'
+
+    click_link 'Login Here'
+
+    fill_in 'Email', with: 'jake@example.com'
+    fill_in 'Password', with: 'hello123'
+    click_on 'Login'
+
+    expect(page).to have_content 'Welcome Jake!'
+    expect(page).to have_content 'RSVP\'ed Guests'
+  end
+
+  scenario 'non-admin users should not see table seater link' do
+    user = new_user
+    user.save!
+    visit '/rsvp'
+
+    click_link 'Login Here'
+
+    fill_in 'Email', with: 'jake@example.com'
+    fill_in 'Password', with: 'hello123'
+    click_on 'Login'
+
+    expect(page).to have_no_content 'Table Seater'
   end
 end
