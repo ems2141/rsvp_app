@@ -1,7 +1,6 @@
 class TableSeater
   def initialize(people)
     @people = people
-    p @people.length-2
   end
 
   def arrange_every_other
