@@ -82,6 +82,10 @@ p {
 
 li {
   list-style-type: none;
+  font-family: 'Didot', serif;
+  color: $dark_gray;
+  text-align: left;
+  font-size: 1.3em;
 }
 
 input[type="submit"] {

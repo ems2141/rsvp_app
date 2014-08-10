@@ -1,5 +1,13 @@
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.name %></li>
-  <% end %>
-</ul>
+<section>
+  <p><span>Registered Guests</span></p>
+  <div class="one_half">
+  <ul>
+    <% @users.each do |user| %>
+      <li><%= user.name %></li>
+    <% end %>
+  </ul>
+  </div>
+
+  <div class="one_half"></div>
+  <div class="resetColumnSet"></div>
+</section>

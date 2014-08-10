@@ -25,6 +25,6 @@ feature 'Registration' do
     fill_in 'Password', with: 'hello123'
     click_on 'Login'
 
-    expect(page).to have_content "RSVP'ed Guests"
+    expect(page).to have_content "View Guests"
   end
 end

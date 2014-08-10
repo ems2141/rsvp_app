@@ -1,30 +1,19 @@
 <div class="small_action_link"><%= link_to "Logout", session_path, method: :delete, class: "logout" %></div>
 
 <section>
-  <p><span>August 8th, 2015</span>
-
-  <p>
+  <p><span>August 8th, 2015</span><p>
 
   <h1>Welcome <%= @user.name %>!</h1>
 
-  <p><span>
-    <% if current_user.admin? %>
-    <a href="/table_seating/new">Table Seater</a>
-      <% end %>
-  </span></p>
-
   <div class="one_half">
     <% if current_user.admin? %>
-      <p>RSVP'ed Guests</p>
-
-<%= link_to 'View Guests', users_path %>
+      <p><%= link_to 'View Guests', users_path %></p>
+      <p><%= link_to 'Table Seater', table_seating_new_path %></p>
     <% end %>
-
   </div>
 
   <div class="one_half">
   </div>
-
 
   <div class="resetColumnSet"></div>
 </section>
