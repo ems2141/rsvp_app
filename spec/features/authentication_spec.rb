@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Authentication' do
-  scenario 'user can login with correct email and password' do
+  scenario 'users can login with correct email and password' do
     user = new_user
     user.save!
     visit '/rsvp'
@@ -15,7 +15,7 @@ feature 'Authentication' do
     expect(page).to have_content "Welcome Jake!"
   end
 
-  scenario 'a user can logout' do
+  scenario 'a users can logout' do
     user = new_user
     user.save!
     visit '/rsvp'
@@ -30,7 +30,7 @@ feature 'Authentication' do
     expect(page).to have_content 'You have been logged out'
   end
 
-  scenario 'user cannot login with invalid email or password' do
+  scenario 'users cannot login with invalid email or password' do
     user = new_user
     user.save!
     visit '/rsvp'

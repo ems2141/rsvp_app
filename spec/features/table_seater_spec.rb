@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'it allows user to play with a table seating chart' do
+feature 'it allows users to play with a table seating chart' do
   scenario 'non-admin users should not see table seater link' do
     user = new_user
     user.save!
@@ -15,7 +15,7 @@ feature 'it allows user to play with a table seating chart' do
     expect(page).to have_no_content 'Table Seater'
   end
 
-  scenario 'admin user can submit a lists of people to be seated every other' do
+  scenario 'admin users can submit a lists of people to be seated every other' do
     create_user(admin: true)
 
     visit '/rsvp'

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post '/table_seating/create', to: 'table_seating#create'
   get '/table_seating/:id', to: 'table_seating#show', as: :table_seating
 
+  resources :users, only: [:index]
   resource :session, only: [:create, :destroy]
 
   # Example of regular route:

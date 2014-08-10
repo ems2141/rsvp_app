@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Registration' do
-  scenario 'user can register' do
+  scenario 'users can register' do
     visit '/'
 
     click_on "RSVP"
