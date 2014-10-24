@@ -2,29 +2,13 @@ require 'spec_helper'
 
 feature 'it allows users to play with a table seating chart' do
   scenario 'non-admin users should not see table seater link' do
-    user = new_user
-    user.save!
-    visit '/rsvp'
-
-    click_link 'Login Here'
-
-    fill_in 'Email', with: 'jake@example.com'
-    fill_in 'Password', with: 'hello123'
-    click_on 'Login'
+    log_in_user(create_user)
 
     expect(page).to have_no_content 'Table Seater'
   end
 
   scenario 'admin users can submit a lists of people to be seated every other' do
-    create_user(admin: true)
-
-    visit '/rsvp'
-
-    click_link 'Login Here'
-
-    fill_in 'Email', with: 'jake@example.com'
-    fill_in 'Password', with: 'hello123'
-    click_on 'Login'
+    log_in_user(create_user(admin: true))
 
     click_on 'Table Seater'
 
@@ -33,5 +17,15 @@ feature 'it allows users to play with a table seating chart' do
     click_on 'Seat Now'
 
     expect(page).to have_content('Table 1: Sam, Jake, Jay, Bob, Joe, Charlie, Jeff, and John')
+  end
+
+  def log_in_user(user)
+    visit '/rsvp'
+
+    click_link 'Login Here'
+
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    click_on 'Login'
   end
 end

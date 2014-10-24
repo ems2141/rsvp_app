@@ -1,9 +1,11 @@
 require 'spec_helper'
 
 feature 'Authentication' do
+  before do
+    create_user
+  end
+
   scenario 'users can login with correct email and password' do
-    user = new_user
-    user.save!
     visit '/rsvp'
 
     click_link 'Login Here'
@@ -12,12 +14,10 @@ feature 'Authentication' do
     fill_in 'Password', with: 'hello123'
     click_on 'Login'
 
-    expect(page).to have_content "Welcome Jake!"
+    expect(page).to have_content 'Welcome Jake!'
   end
 
   scenario 'a users can logout' do
-    user = new_user
-    user.save!
     visit '/rsvp'
 
     click_link 'Login Here'
@@ -27,12 +27,11 @@ feature 'Authentication' do
     click_on 'Login'
 
     click_on 'Logout'
+
     expect(page).to have_content 'You have been logged out'
   end
 
   scenario 'users cannot login with invalid email or password' do
-    user = new_user
-    user.save!
     visit '/rsvp'
 
     click_link 'Login Here'
@@ -40,7 +39,7 @@ feature 'Authentication' do
     fill_in 'Email', with: 'jake@test.com'
     fill_in 'Password', with: 'hello123'
     click_on 'Login'
+
     expect(page).to have_content 'Invalid email or password'
   end
-
 end

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe User do
-
   before do
     @user = new_user
     expect(@user).to be_valid
@@ -34,5 +33,4 @@ describe User do
     user_1.save
     expect(user_1).to_not be_valid
   end
-
 end

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 feature 'Admin' do
-
   before do
     create_user(
         email: 'jake@example.com',
@@ -24,17 +23,5 @@ feature 'Admin' do
     click_on 'View Guests'
     expect(page).to have_content 'Meg'
     expect(page).to have_content 'Tommy'
-  end
-
-  scenario 'user can click link to return to homepage from the users index' do
-    visit '/login'
-    fill_in 'Email', with: 'jake@example.com'
-    fill_in 'Password', with: 'hello123'
-    click_on 'Login'
-
-    click_on 'View Guests'
-    expect(page).to have_content 'Meg'
-    click_on 'Home'
-    expect(page).to have_content 'Welcome Jake!'
   end
 end
