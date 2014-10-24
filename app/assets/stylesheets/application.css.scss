@@ -125,6 +125,24 @@ textarea.guests {
   border: 2px solid black;
 }
 
+.button, input[type="submit"], [type="file"] + label {
+  width: auto;
+  margin-top: 6px;
+  margin-left: 19px;
+  padding: 12px 35px;
+  border: 1px solid lightskyblue;
+  display: inline-block;
+
+  background-color: lightskyblue;
+  color: #ffffff;
+
+  font-size: 18px;
+
+  &.dark {
+    background-color: darkgray;
+  }
+}
+
 /* ----- =columns ----- */
 
 .one_half {
