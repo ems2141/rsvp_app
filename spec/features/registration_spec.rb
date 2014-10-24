@@ -17,7 +17,7 @@ feature 'Registration' do
   scenario 'admin users can see a link to view a list of registered users' do
     create_user(admin: true)
 
-    visit '/rsvp'
+    visit '/register/new'
 
     click_link 'Login Here'
 

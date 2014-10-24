@@ -1,30 +1,16 @@
 require 'spec_helper'
 
 feature 'Authentication' do
-  before do
-    create_user
-  end
+  let(:user) { create_user }
 
   scenario 'users can login with correct email and password' do
-    visit '/rsvp'
-
-    click_link 'Login Here'
-
-    fill_in 'Email', with: 'jake@example.com'
-    fill_in 'Password', with: 'hello123'
-    click_on 'Login'
+    log_user_in(user.email, user.password)
 
     expect(page).to have_content 'Welcome Jake!'
   end
 
   scenario 'a users can logout' do
-    visit '/rsvp'
-
-    click_link 'Login Here'
-
-    fill_in 'Email', with: 'jake@example.com'
-    fill_in 'Password', with: 'hello123'
-    click_on 'Login'
+    log_user_in(user.email, user.password)
 
     click_on 'Logout'
 
@@ -32,14 +18,18 @@ feature 'Authentication' do
   end
 
   scenario 'users cannot login with invalid email or password' do
-    visit '/rsvp'
+    log_user_in('jake@test.com', user.password)
+
+    expect(page).to have_content 'Invalid email or password'
+  end
+
+  def log_user_in(email = '', password = 'password')
+    visit '/register/new'
 
     click_link 'Login Here'
 
-    fill_in 'Email', with: 'jake@test.com'
-    fill_in 'Password', with: 'hello123'
+    fill_in 'Email', with: email
+    fill_in 'Password', with: password
     click_on 'Login'
-
-    expect(page).to have_content 'Invalid email or password'
   end
 end

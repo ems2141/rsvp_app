@@ -20,7 +20,7 @@ feature 'it allows users to play with a table seating chart' do
   end
 
   def log_in_user(user)
-    visit '/rsvp'
+    visit '/register/new'
 
     click_link 'Login Here'
 

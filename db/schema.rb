@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20140606170116) do
 
   create_table "users", force: true do |t|
     t.string  "name"
-    t.boolean "rsvp"
+    t.boolean "register"
     t.string  "email",              default: "",    null: false
     t.string  "encrypted_password", default: "",    null: false
     t.string  "password_digest"

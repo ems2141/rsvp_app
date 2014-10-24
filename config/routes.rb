@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get '/welcome', to: 'welcome#index'
-  get '/', to: 'rsvp#index'
-  get '/rsvp', to: 'rsvp#new'
-  post '/rsvp', to: 'rsvp#create'
+  get '/', to: 'register#index'
+
+  resources :register, only: [:index, :new, :create]
+
   get '/login', to: 'login#index'
   get '/table_seating/new', to: 'table_seating#new'
   post '/table_seating/create', to: 'table_seating#create'

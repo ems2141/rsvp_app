@@ -1,5 +1,4 @@
-class RsvpController < ApplicationController
-
+class RegisterController < ApplicationController
   def index
 
   end
