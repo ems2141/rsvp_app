@@ -9,7 +9,6 @@ def new_user(attributes= {})
       name: "Jake",
       email: "jake@example.com",
       password: "hello123",
-      wedding_password: "ellieandnick2015",
       admin: false
   }
   User.new(defaults.merge(attributes))

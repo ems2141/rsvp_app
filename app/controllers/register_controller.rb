@@ -12,7 +12,6 @@ class RegisterController < ApplicationController
         name: params[:user][:name],
         email: params[:user][:email],
         password: params[:user][:password],
-        wedding_password: params[:user][:wedding_password]
     )
     if @user.save
       log_user_in(@user)

@@ -11,11 +11,6 @@ describe User do
     expect(@user).to_not be_valid
   end
 
-  it "wedding password must be correct" do
-    user = new_user(wedding_password: "ellieandnick")
-    expect(user).to_not be_valid
-  end
-
   it "password can't be blank" do
     @user.password = ""
     @user.password_digest = ""

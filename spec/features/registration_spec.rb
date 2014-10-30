@@ -7,8 +7,7 @@ feature 'Registration' do
     click_on 'RSVP'
     fill_in 'Name', with: 'Sally'
     fill_in 'Email', with: 'sally@example.com'
-    fill_in 'Wedding Password', with: 'ellieandnick2015'
-    fill_in 'Your Password', with: 'hello123'
+    fill_in 'Password', with: 'hello123'
     click_button 'Yes!'
 
     expect(page).to have_content 'Welcome Sally!'

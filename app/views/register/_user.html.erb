@@ -6,11 +6,8 @@
     <p><%= f.label :email %>
       <%= f.text_field :email %></p>
 
-    <p><%= f.label :password, "Your Password" %>
+    <p><%= f.label :password, "Password" %>
       <%= f.password_field :password %></p>
-
-    <p><%= f.label :wedding_password, "Wedding Password" %>
-      <%= f.password_field :wedding_password %></p>
 
     <p>All set? <%= f.submit "Yes!", class: "form-button" %></p>
   <% end %>
