@@ -1,13 +1,37 @@
 <div class="small_action_link"><%= link_to "Logout", session_path, method: :delete, class: "logout" %></div>
 
 <section>
-  <p><span>August 8th, 2015</span><p>
+  <p><span>August 8th, 2015</span>
+
+  <p>
 
   <h1>Welcome <%= @user.name %>!</h1>
+
+  <div class="welcome-text">
+    <p>
+      Dear Friends and Family,
+    </p>
+
+    <p>
+      Welcome to our wedding website! We are really excited to be married in STEAMBOAT SPRINGS next summer and
+      really hope you are able to attend!
+
+      Please check back frequently for more information on logistics surrounding our special day.
+    </p>
+
+    <p>
+      If you have any technical issues with the site, please feel free to email me @ ems2141@gmail.com.
+    </p>
+
+    <p>
+      Love, Ellie and Nick
+    </p>
+  </div>
 
   <div class="one_half">
     <% if current_user.admin? %>
       <p><%= link_to 'View Guests', users_path %></p>
+
       <p><%= link_to 'Table Seater', table_seating_new_path %></p>
     <% end %>
 
