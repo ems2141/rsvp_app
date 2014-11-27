@@ -39,27 +39,9 @@ section {
   overflow: hidden;
 }
 
-h1 {
-  font-size: 7.0em;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  background: image-url('steamboat-trees.JPG') left center no-repeat;
-  background-size: cover;
-  /* BACKGROUND CLIP TO ALLOW GIF TO MASK THROUGH */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 p {
   margin: 40px;
   font-size: 1.5em;
-  font-family: 'Didot', serif;
-  color: $white;
-}
-
-.small_action_link {
-  margin: 20px;
-  font-size: .8em;
   font-family: 'Didot', serif;
   color: $white;
 }
@@ -69,69 +51,6 @@ p {
   font-size: 1.3em;
   font-family: 'Didot', serif;
   color: cornflowerblue;
-}
-
-li {
-  list-style-type: none;
-  font-family: 'Didot', serif;
-  color: $white;
-  text-align: left;
-  font-size: 1.3em;
-}
-
-input[type="submit"] {
-  width: 2em;
-  font-size: .7em;
-  font-family: 'Didot', serif;
-  padding: .6em 0;
-  //  background-color: black;
-  //  color: whitesmoke;
-}
-
-.errors {
-  margin: 40px;
-  font-size: 1.2em;
-  font-family: 'Didot', serif;
-  color: red;
-}
-
-.form_container {
-  font-size: .6em;
-}
-
-.field_with_errors {
-  display: inline;
-  margin: 40px;
-  font-size: 2.2em;
-  font-family: 'Didot', serif;
-  color: $white;
-  input {
-    border: 1px solid red;
-  }
-}
-
-textarea.guests {
-  width: 308px;
-  height: 75px;
-  border: 2px solid black;
-}
-
-.button, input[type="submit"], [type="file"] + label {
-  width: auto;
-  margin-top: 6px;
-  margin-left: 19px;
-  padding: 12px 35px;
-  border: 1px solid lightskyblue;
-  display: inline-block;
-
-  background-color: lightskyblue;
-  color: #ffffff;
-
-  font-size: 18px;
-
-  &.dark {
-    background-color: darkgray;
-  }
 }
 
 .welcome-text {
