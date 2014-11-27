@@ -23,7 +23,12 @@
 /* ----- =structure ----- */
 @import url(http://fonts.googleapis.com/css?family=Oswald:700);
 
-$dark_gray: #3d3d3d;
+$white: whitesmoke;
+
+body {
+  background: url('mt-princeton.JPG') no-repeat center center fixed;
+  background-size: 100%;
+}
 
 section {
   text-align: center;
@@ -49,35 +54,14 @@ p {
   margin: 40px;
   font-size: 1.5em;
   font-family: 'Didot', serif;
-  color: $dark_gray;
-  span {
-    position: relative;
-    display: inline-block;
-    line-height: 1;
-    &:after, &:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      height: 1px;
-      background: $dark_gray;
-      width: 99999px;
-    }
-    &:before {
-      left: 100%;
-      margin-left: 20px;
-    }
-    &:after {
-      right: 100%;
-      margin-right: 20px;
-    }
-  }
+  color: $white;
 }
 
 .small_action_link {
   margin: 20px;
   font-size: .8em;
   font-family: 'Didot', serif;
-  color: $dark_gray;
+  color: $white;
 }
 
 .external_link {
@@ -90,7 +74,7 @@ p {
 li {
   list-style-type: none;
   font-family: 'Didot', serif;
-  color: $dark_gray;
+  color: $white;
   text-align: left;
   font-size: 1.3em;
 }
@@ -120,7 +104,7 @@ input[type="submit"] {
   margin: 40px;
   font-size: 2.2em;
   font-family: 'Didot', serif;
-  color: $dark_gray;
+  color: $white;
   input {
     border: 1px solid red;
   }
