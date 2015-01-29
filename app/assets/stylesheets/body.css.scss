@@ -1,0 +1,51 @@
+$white: whitesmoke;
+
+.intro {
+  background: url("intro-bkg.jpg") 0 0 no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  img {
+    max-width: 265px;
+    margin: 0 auto;
+  }
+}
+
+#welcome {
+  background: url("nick-and-ellie-steamboat-deck.JPG");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#lodging {
+  background: url("vail-ski.JPG");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  p, h1 {
+  font-family: 'Lobster', cursive;
+    color: #000000;
+    font-weight: bolder;
+  }
+
+  a {
+    color: #000000;
+    font-family: 'Lobster', cursive;
+    font-weight: bolder;
+    background-color: lightgray;
+    padding: 10px;
+    border: solid 1px;
+  }
+}

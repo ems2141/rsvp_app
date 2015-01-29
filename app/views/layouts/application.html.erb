@@ -2,11 +2,38 @@
 <html>
 <head>
   <title>WeddingRsvpApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+<header id="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="#">
+        Ellie & Nick
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a href="#replace-me">Menu Item</a>
+        </li>
+        <li>
+          <a href="#lodging">Lodging</a>
+        </li>
+        <li>
+          <a href="#replace-me">Menu Item</a>
+        </li>
+        <li>
+          <a href="#replace-me">Menu Item</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <%= yield %>
 

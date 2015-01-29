@@ -1,36 +1,68 @@
-<body>
-<section>
-  <p>August 8th, 2015<p>
+<main>
+  <section class="intro">
+    <div class="container">
+      <%= image_tag 'ellie+nick.png' %>
+    </div>
+  </section>
 
-  <div class="welcome-text">
-    <p>
-      Dear Friends and Family,
-    </p>
+  <section id="welcome">
+    <div class="container">
+      <p>August 8th, 2015
 
-    <p>
-      Welcome to our wedding website! We are really excited to be married in STEAMBOAT SPRINGS next summer!
+      <p>
 
-      Please check back frequently for more information on logistics surrounding our special day.
-    </p>
+      <div class="welcome-text">
+        <p>
+          Dear Friends and Family,
+        </p>
 
-    <p>
-      Love, Nick and Ellie
-    </p>
-  </div>
+        <p>
+          Welcome to our wedding website! We are really excited to be married in STEAMBOAT SPRINGS next summer!
 
-  <div class="one_half">
-  </div>
-  <div class="resetColumnSet"></div>
-<br>
-<br>
-  <p>Lodging</p>
+          Please check back frequently for more information on logistics surrounding our special day.
+        </p>
 
-  <p>We have reserved a special rate for our wedding weekend at the Sheraton.
-    <br>
-    Please feel free to reference the link below for information but when you are ready to book,
-    we would HIGHLY recommend that you contact John at 800-848-8878 during normal business hours Monday - Friday.  
-  </p>
-  <%= link_to 'Click here for room information', 'https://www.starwoodmeeting.com/StarGroupsWeb/res?id=1411102489&key=1BC26D89', class: 'external_link' %>
+        <p>
+          Love, Nick and Ellie
+        </p>
 
-</section>
-</body>
+      </div>
+    </div>
+  </section>
+
+  <section id="lodging">
+    <div class="container">
+
+      <p>
+      <h1>
+        Lodging
+      </h1>
+      </p>
+
+      <p>We have reserved a special rate for our wedding weekend at the Sheraton.
+        <br>
+        Please feel free to reference the link below for information but when you are ready to book,
+        we would HIGHLY recommend that you contact John at 800-848-8878 during normal business hours Monday - Friday.
+      </p>
+      <%= link_to 'Click here for room information', 'https://www.starwoodmeeting.com/StarGroupsWeb/res?id=1411102489&key=1BC26D89', class: 'external_link' %>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  $(document).ready(function () {
+    $('a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+        window.location.hash = target;
+      });
+    });
+  });
+</script>
