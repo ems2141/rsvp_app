@@ -48,4 +48,16 @@ $white: whitesmoke;
     padding: 10px;
     border: solid 1px;
   }
+
+  }
+#travel {
+  background: url("travel.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Lobster', cursive;
+  font-weight: bolder;
 }
