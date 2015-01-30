@@ -1,7 +1,7 @@
 $white: whitesmoke;
 
 .intro {
-  background: url("intro-bkg.jpg") 0 0 no-repeat;
+  background: image-url("intro-bkg.jpg") 0 0 no-repeat;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -16,7 +16,7 @@ $white: whitesmoke;
 }
 
 #welcome {
-  background: url("nick-and-ellie-steamboat-deck.JPG");
+  background: image-url("nick-and-ellie-steamboat-deck.JPG");
   background-size: cover;
   background-attachment: fixed;
   display: flex;
