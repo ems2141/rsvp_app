@@ -16,13 +16,27 @@ $white: whitesmoke;
 }
 
 #welcome {
-  background: image-url("nick-and-ellie-steamboat-deck.JPG");
+  background: image-url("mt-elbert-2.JPG");
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  p, h1 {
+    font-family: 'Lobster', cursive;
+    color: #000000;
+    font-weight: bolder;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+  .container {
+    padding-left: 400px;
+  }
+
 }
 
 #lodging {
