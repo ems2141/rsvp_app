@@ -26,7 +26,7 @@ $white: whitesmoke;
 }
 
 #lodging {
-  background: url("vail-ski.JPG");
+  background: image-url("vail-ski.JPG");
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -51,7 +51,7 @@ $white: whitesmoke;
 
   }
 #travel {
-  background: url("travel.jpeg");
+  background: image-url("travel.jpeg");
   background-size: cover;
   background-attachment: fixed;
   display: flex;
