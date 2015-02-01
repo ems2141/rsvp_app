@@ -49,7 +49,7 @@ $white: whitesmoke;
   height: 100vh;
 
   p, h1 {
-  font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive;
     color: #000000;
     font-weight: bolder;
   }
@@ -63,7 +63,44 @@ $white: whitesmoke;
     border: solid 1px;
   }
 
+}
+
+#schedule {
+  background: image-url("goat.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Lobster', cursive;
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+#activities {
+  background: image-url("mountain-landscape.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  li {
+    color: #000000;
+    family: 'Lobster', cursive;
+    list-style: none;
+    font-family: 'Lobster', cursive;
+    font-weight: bolder;
+    font-size: 1.5em;
   }
+  p, h1, h4 {
+    font-family: 'Lobster', cursive;
+    color: #000000;
+    font-weight: bolder;
+  }
+}
+
 #travel {
   background: image-url("travel.jpeg");
   background-size: cover;
@@ -74,4 +111,14 @@ $white: whitesmoke;
   height: 100vh;
   font-family: 'Lobster', cursive;
   font-weight: bolder;
+}
+
+#seeyousoon {
+  background: image-url("first-steamboat-picture.JPG");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
