@@ -113,6 +113,18 @@ $white: whitesmoke;
   font-weight: bolder;
 }
 
+#registry {
+  background: image-url("registry.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Lobster', cursive;
+  font-weight: bolder;
+}
+
 #seeyousoon {
   background: image-url("first-steamboat-picture.JPG");
   background-size: cover;
